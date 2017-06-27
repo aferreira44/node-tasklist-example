@@ -37,10 +37,13 @@ app.delete('/task/:task_index', (req, res) => {
   res.send(taskList);
 });
 
+// Running our Express server
 app.listen(config.port, () => {
   util.log('Running server on localhost:' + config.port);
 });
 
+
+// Validate if a task is empty for POST and PUT endpoints
 function validationMiddleware(req, res, next) {
   if (_.isEmpty(req.body.task)) {
     return res
