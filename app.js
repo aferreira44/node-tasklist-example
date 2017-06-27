@@ -1,5 +1,7 @@
 'use strict';
 
+const config = require('config');
+const util = require('util');
 const bodyParser = require('body-parser');
 const express = require('express');
 const _ = require('lodash');
@@ -35,7 +37,9 @@ app.delete('/task/:task_index', (req, res) => {
   res.send(taskList);
 });
 
-app.listen(8081);
+app.listen(config.port, () => {
+  util.log('Running server on localhost:' + config.port);
+});
 
 function validationMiddleware(req, res, next) {
   if (_.isEmpty(req.body.task)) {

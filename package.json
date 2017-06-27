@@ -16,6 +16,7 @@
   "license": "WTFPL",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "config": "^1.26.1",
     "express": "^4.15.3",
     "lodash": "^4.17.4"
   }
