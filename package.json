@@ -1,0 +1,20 @@
+{
+  "name": "node-tasklist-example",
+  "version": "0.0.1",
+  "description": "Node.js TaskList Example",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "node.js",
+    "tasklist",
+    "express",
+    "tests"
+  ],
+  "author": "André Ferreira",
+  "license": "WTFPL",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
